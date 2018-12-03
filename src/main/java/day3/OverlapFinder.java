@@ -10,11 +10,13 @@ import java.util.stream.Collectors;
 
 class OverlapFinder {
 
-    private final Integer[] fabric = new Integer[1_000_000];
-    private final Set<Integer> result = new HashSet<>();
+    private static final Logger log = LoggerFactory.getLogger(OverlapFinder.class.getSimpleName());
+
     private static final int X_WIDTH = 1_000;
     private static final int Y_WIDTH = 1_000;
-    private static final Logger log = LoggerFactory.getLogger(OverlapFinder.class.getSimpleName());
+
+    private final Integer[] fabric = new Integer[1_000_000];
+    private final Set<Integer> result = new HashSet<>();
 
     long findOverlappedInches(List<String> input) {
         log.info("PART 1");
