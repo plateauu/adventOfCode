@@ -61,7 +61,7 @@ class OverlapFinder {
                 .filter(e -> !e.getValue().stream().anyMatch(result::contains))
                 .map(Map.Entry::getKey)
                 .findFirst()
-                .orElse("jklj");
+                .orElse("");
 
         log.info("No overlapped id #: {}", noOverlapped);
         log.debug("Spent time: {} ms", System.currentTimeMillis() - start);
