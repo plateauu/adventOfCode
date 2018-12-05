@@ -14,5 +14,7 @@ public class App {
                 .collect(Collectors.toList());
         var overlapFinder = new OverlapFinder();
         overlapFinder.findOverlappedInches(input);
+        overlapFinder = new OverlapFinder();
+        overlapFinder.findNotOverlappedId(input);
     }
 }

@@ -32,4 +32,13 @@ class FabricOverlapsTest {
         should_return_position_for_fabric(150, 100, 99149);
     }
 
+    @Test
+    void should_return_not_overlapped_claim() {
+        var input = List.of("#1 @ 1,3: 4x4", "#2 @ 3,1: 4x4", "#3 @ 5,5: 2x2");
+        var finder = new OverlapFinder();
+        var result = finder.findNotOverlappedId(input);
+        var expceted = "3";
+        Assertions.assertEquals(expceted, result);
+    }
+
 }
